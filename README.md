@@ -7,7 +7,7 @@ Ele solicita acesso à API de geolocalização do browser e com os dados retorna
 É bem simples, basta adicioná-lo ao seu documento HTML e em seguida chamar a função <i> getPosition() </i>.
 Porém, você terá que configurar no próprio script como os dados obtidos serão tratados, pois a essa função não tem retorno para sucesso, apenas para o caso de o browser não suportar a geolocalização.
 
-A função <i> getPosition() </i>. Recebe dois callbacks, <i> handleSuccess </i> e <i> handleError() </i>, é nesses callbacks onde você poderá escolher o que acontecerá com os dados em caso de sucesso e de falha.
+A função <i> getPosition() </i> recebe dois callbacks, <i> handleSuccess() </i> e <i> handleError() </i>, é nesses callbacks onde você poderá escolher o que acontecerá com os dados em caso de sucesso e de falha.
 
 A API publica utilizada é a [Geocode.xyz](https://geocode.xyz/api), a requisição dos dados é feita utilizando fetch, mas pode ser alterada para outra biblioteca sem nenhum problema.
 
