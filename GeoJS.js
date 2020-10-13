@@ -1,5 +1,5 @@
 
-function getPosition(apiResult = false) {
+function getPosition() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(handleSuccess,handleError);
   } else {
@@ -10,12 +10,17 @@ function getPosition(apiResult = false) {
 const handleSuccess = async position => {
     const {latitude, longitude} = position.coords;
     const response = await fetch(`https://geocode.xyz/${latitude},${longitude}?geoit=json`);
+
     // SUGIRO QUE VOCÊ DÊ UMA OLHADA NO OBJETO DATA, TEM MUITA INFORMAÇÃO LEGAL NELE.
+
     const data = await response.json();
     const { postal:cep, staddress:endereco, region:municipio } = data;
     const { name:bairro } = data.osmtags;
+
     // Resultados como cep, endereço e número da casa serão aproximados.
     console.log(`CEP: ${cep}, rua: ${endereco}, municipio: ${municipio}, bairro: ${bairro}`);
+
+    //AQUI VOCÊ PODE USAR DA FORMA COMO QUISER ESSES DADOS.
 }
 
 const handleError = error => {
