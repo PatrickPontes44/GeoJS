@@ -9,8 +9,7 @@ function getPosition(apiResult = false) {
 
 const handleSuccess = async position => {
     const {latitude, longitude} = position.coords;
-    // const response = await fetch(`https://geocode.xyz/${latitude},${longitude}?geoit=json`);
-    const response = await fetch(`https://geocode.xyz/-25.3683792,-49.1727187?geoit=json`);
+    const response = await fetch(`https://geocode.xyz/${latitude},${longitude}?geoit=json`);
     // SUGIRO QUE VOCÊ DÊ UMA OLHADA NO OBJETO DATA, TEM MUITA INFORMAÇÃO LEGAL NELE.
     const data = await response.json();
     const { postal:cep, staddress:endereco, region:municipio } = data;
