@@ -13,4 +13,3 @@ A API publica utilizada é a [Geocode.xyz](https://geocode.xyz/api), a requisiç
 
 ## Considerações finais
 Caso você tenha gostado desse script deixe uma Estrela para o repositório!
-<img src="https://css-tools.com/img/box-shadow-generator.PNG" />
